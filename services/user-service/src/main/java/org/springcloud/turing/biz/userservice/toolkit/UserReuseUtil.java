@@ -21,8 +21,6 @@ import static org.springcloud.turing.biz.userservice.common.constant.Index12306C
 
 /**
  * 用户名可复用工具类
- *
- *
  */
 public final class UserReuseUtil {
 
