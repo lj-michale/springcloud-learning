@@ -91,3 +91,4 @@ public class TokenValidateGatewayFilterFactory extends AbstractGatewayFilterFact
         return userInfo != null;
     }
 }
+
