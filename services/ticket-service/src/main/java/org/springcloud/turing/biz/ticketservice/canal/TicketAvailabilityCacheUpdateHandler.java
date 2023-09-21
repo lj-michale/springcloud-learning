@@ -39,7 +39,6 @@ import static org.springcloud.turing.biz.ticketservice.common.constant.RedisKeyC
 /**
  * 列车余票缓存更新组件
  *
- *
  */
 @Component
 @RequiredArgsConstructor
