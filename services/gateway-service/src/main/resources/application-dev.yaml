@@ -1,0 +1,45 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: turing-user-service
+          uri: lb://turing-user${unique-name:}-service/api/user-service/**
+          predicates:
+            - Path=/api/user-service/**
+          filters:
+            - name: TokenValidate
+              args:
+                blackPathPre:
+                  - /api/user-service/passenger
+                  - /api/user-service/query
+                  - /api/user-service/logout
+                  - /api/user-service/deletion
+
+        - id: turing-ticket-service
+          uri: lb://turing-ticket${unique-name:}-service/api/ticket-service/**
+          predicates:
+            - Path=/api/ticket-service/**
+          filters:
+            - name: TokenValidate
+              args:
+                blackPathPre:
+                  - /api/ticket-service/ticket/purchase
+                  - /api/ticket-service/ticket/pay/query
+                  - /api/ticket-service/ticket/cancel
+
+        - id: turing-pay-service
+          uri: lb://turing-pay${unique-name:}-service/api/pay-service/**
+          predicates:
+            - Path=/api/pay-service/**
+
+        - id: turing-order-service
+          uri: lb://turing-order${unique-name:}-service/api/order-service/**
+          predicates:
+            - Path=/api/order-service/**
+          filters:
+            - name: TokenValidate
+              args:
+                blackPathPre:
+                  - /api/order-service/order/ticket/query
+                  - /api/order-service/order/ticket/page
+                  - /api/order-service/order/ticket/self/page
