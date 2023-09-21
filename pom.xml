@@ -8,7 +8,7 @@
     <packaging>pom</packaging>
 
     <description>
-        SpringBoot3+Java17+SpringCloudAlibaba+RocketMQ等技术架构
+        SpringBoot3+Java19+SpringCloudAlibaba+RocketMQ等技术架构
     </description>
 
     <properties>
