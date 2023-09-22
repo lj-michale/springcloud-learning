@@ -89,3 +89,4 @@ public class TicketAvailabilityCacheUpdateHandler implements AbstractExecuteStra
         return CanalExecuteStrategyMarkEnum.T_SEAT.getActualTable();
     }
 }
+
