@@ -17,10 +17,10 @@
   -->
 
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.springcloud.turing.biz.userservice.dao.mapper.UserPhoneMapper">
+<mapper namespace="org.springcloud.turing.biz.dao.mapper.UserPhoneMapper">
 
     <!-- 注销用户 -->
-    <update id="deletionUser" parameterType="org.springcloud.turing.biz.userservice.dao.entity.UserPhoneDO">
+    <update id="deletionUser" parameterType="org.springcloud.turing.biz.dao.entity.UserPhoneDO">
         update t_user_phone
         set deletion_time = #{deletionTime},
             del_flag      = '1'
